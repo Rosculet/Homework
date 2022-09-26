@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,14 +8,13 @@ public class Main {
     }
 
     public static void checkForDuplication(int [] array) {
-        ArrayList<Integer> list = new ArrayList();
+        HashMap <Integer, Integer> integerHashMap = new HashMap();
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] != i) {
-                list.add(array[i]);
-                list.add(i);
+                integerHashMap.put(i, array[i] );
             }
         }
-        System.out.println(list);
+        System.out.println(integerHashMap);
     }
 }
